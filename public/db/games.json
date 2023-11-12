@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Monkey Island",
+        "developed": "Lucasfilm Games y Telltale Games",
+        "year": "1990",
+        "platform": "PC",
+        "image": "../assets/img/monkey.webp"
+    },
+    {
+        "name": "Reverie",
+        "developed": "Lucasfilm Games y Telltale Games",
+        "year": "1990",
+        "platform": "PC",
+        "image": "../assets/img/reverie.webp"
+    },
+    {
+        "name": "Synapse",
+        "developed": "Lucasfilm Games y Telltale Games",
+        "year": "1990",
+        "platform": "PC",
+        "image": "../assets/img/Synapse.webp"
+    },
+    {
+        "name": "Remnant 2",
+        "developed": "Lucasfilm Games y Telltale Games",
+        "year": "1990",
+        "platform": "PC",
+        "image": "../assets/img/remnant2.webp"
+    },
+    {
+        "name": "HL",
+        "developed": "Lucasfilm Games y Telltale Games",
+        "year": "1990",
+        "platform": "PC",
+        "image": "../assets/img/HL.webp"
+    },
+    {
+        "name": "Megaman",
+        "developed": "Lucasfilm Games y Telltale Games",
+        "year": "1990",
+        "platform": "PC",
+        "image": "../assets/img/megaman.webp"
+    },
+    {
+        "name": "DI2",
+        "developed": "Lucasfilm Games y Telltale Games",
+        "year": "1990",
+        "platform": "PC",
+        "image": "../assets/img/DI2.webp"
+    },
+    {
+        "name": "r6",
+        "developed": "Lucasfilm Games y Telltale Games",
+        "year": "1990",
+        "platform": "PC",
+        "image": "../assets/img/r6.webp"
+    },
+    {
+        "name": "doom_ftw",
+        "developed": "Lucasfilm Games y Telltale Games",
+        "year": "1990",
+        "platform": "PC",
+        "image": "../assets/img/doom_ftw.webp"
+    },
+    {
+        "name": "Skyrim",
+        "developed": "Lucasfilm Games y Telltale Games",
+        "year": "1990",
+        "platform": "PC",
+        "image": "../assets/img/skyrim.webp"
+    }
+]

@@ -1,0 +1,72 @@
+[
+	{
+		"name": "65",
+		"category": "science fiction, action film",
+		"directed": "AScott Beck, Bryan Woods",
+		"duration": "93 minutes",
+		"image": "../assets/img/65.webp"
+	},
+	{
+		"name": "Ant-Man and the Wasp: Quantumania",
+		"category": "superhero film",
+		"directed": "Peyton Reed",
+		"duration": "124 minutes",
+		"image": "../assets/img/Ant_Man_y_la_Avispa_Quantumanaia-585469373-large.webp"
+	},
+	{
+		"name": "John Wick: Chapter 4",
+		"category": "neo-noir action thriller film",
+		"directed": "Chad Stahelski",
+		"duration": "169 minutes",
+		"image": "../assets/img/jw4.webp"
+	},
+	{
+		"name": "Shazam! Fury of the Gods",
+		"category": "superhero film",
+		"directed": "David F. Sandberg",
+		"duration": "130 minutes",
+		"image": "../assets/img/shazam.webp"
+	},
+	{
+		"name": "Knock at the Cabin",
+		"category": "apocalyptic psychological horror",
+		"directed": "M. Night Shyamalan",
+		"duration": "100 minutes",
+		"image": "../assets/img/knockatthecabin.webp"
+	},
+	{
+		"name": "Scream VI",
+		"category": "slasher film",
+		"directed": "Matt Bettinelli-Olpin, Tyler Gillett",
+		"duration": "122 minutes",
+		"image": "../assets/img/scream6.webp"
+	},
+	{
+		"name": "The Fabelmans",
+		"category": "coming-of-age drama film",
+		"directed": "Steven Spielberg",
+		"duration": "151 minutes",
+		"image": "../assets/img/Los_Fabelman-723163902-large.webp"
+	},
+	{
+		"name": "Jason Bourne",
+		"category": "action-thriller film",
+		"directed": "Paul Greengrass",
+		"duration": "123 minutes",
+		"image": "../assets/img/jason_bourne.webp"
+	},
+	{
+		"name": "V for Vendetta",
+		"category": "dystopian political action film",
+		"directed": "James McTeigue",
+		"duration": "133 minutes",
+		"image": "../assets/img/V_For_Vendetta.webp"
+	},
+	{
+		"name": "21 Blackjack",
+		"category": "heist drama film",
+		"directed": "Robert Luketic",
+		"duration": "123 minutes",
+		"image": "../assets/img/21_Blackjack.webp"
+	}
+]
