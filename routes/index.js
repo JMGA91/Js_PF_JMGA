@@ -49,6 +49,30 @@ router.all('/games', (req, res)=>{
 router.all('/contact', (req, res)=>{
 	res.render('contact.html', {currSec: 'contact'});
 });
+router.all('/search/:query', (req, res)=>{
+	let searchResults = [];
+	const query = req.params.query;
+	const moviesArray = readDb(path.join(process.cwd(), `./public/db/movies.json`));
+	const gamesArray = readDb(path.join(process.cwd(), `./public/db/games.json`));
+
+	for (let i = 0; i < moviesArray.length; i++) {
+		const element = moviesArray[i];
+		if (element.name.includes(query)) {
+			searchResults.push(element);
+		}
+	}
+	for (let i = 0; i < gamesArray.length; i++) {
+		const element = gamesArray[i];
+		if (element.name.includes(query)) {
+			searchResults.push(element);
+		}
+	}
+
+	// searchResults = searchResults.toString();
+	res.render('search-results.html', {currSec: 'searchResults', query: query, searchResults: searchResults});
+	/* res.send(`searchResults: ${searchResults}`);
+	res.end(); */
+});
 
 // ROUTES FOR API
 router.all('/fp-api/:type', (req, res)=>{

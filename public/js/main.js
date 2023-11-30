@@ -8,7 +8,82 @@ document.querySelectorAll('nav .nav-item .nav-link').forEach(navLink=>{
 
 if (document.querySelector('#wrapperCajitas')) {
     const wrapperCajitas = document.querySelector('#wrapperCajitas');
-	var renderCajitas = (section)=>{
+    let arrayFavs = [];
+    if (localStorage.arrayFavs) {
+        arrayFavs = localStorage.arrayFavs.split(',');
+    }
+    const insertCajitas = (dataArray, section)=>{
+        // dataArray = Array.from(dataArray);
+        for (let i = 0; i < dataArray.length; i++) {
+            const element = dataArray[i];
+
+            let classActive = '';
+
+            if (arrayFavs.includes(element.name)) {
+                classActive = 'active';
+            }
+
+            let tempDiv = document.createElement('div');
+
+            if (section === 'home') {
+                tempDiv.setAttribute('class', `cajita cajita_home cajita_home_${i}`);
+                tempDiv.innerHTML = `
+                    <button class="btnFav ${classActive}" data-name="${element.name}">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 206.333 206.333" style="enable-background:new 0 0 206.333 206.333;" xml:space="preserve"><path fill="#bf0101" d="M206.333,76.952c0,25.365-13.967,46.069-42.7,63.297c-36.253,21.737-54.063,47.905-54.239,48.167 c-1.393,2.076-3.729,3.321-6.228,3.321c-2.497,0-4.83-1.243-6.223-3.314C96.671,188.02,78.66,161.81,42.7,140.249 C13.967,123.021,0,102.316,0,76.952c0-30.228,19.701-62.354,56.211-62.354c24.457,0,39.282,10.829,46.956,18.941 c7.674-8.113,22.499-18.941,46.956-18.941C186.633,14.597,206.333,46.724,206.333,76.952z"/></svg>
+                    </button>
+                    <img src="${element.image}">
+                    <p class="cajitaOverlay">
+                        ${element.name}<br>
+                    </p>
+                `;
+            }
+            if (section === 'movies') {
+                tempDiv.setAttribute('class', `cajita cajita_movie cajita_movie_${i}`);
+                tempDiv.innerHTML = `
+                    <button class="btnFav ${classActive}" data-name="${element.name}">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 206.333 206.333" style="enable-background:new 0 0 206.333 206.333;" xml:space="preserve"><path fill="#bf0101" d="M206.333,76.952c0,25.365-13.967,46.069-42.7,63.297c-36.253,21.737-54.063,47.905-54.239,48.167 c-1.393,2.076-3.729,3.321-6.228,3.321c-2.497,0-4.83-1.243-6.223-3.314C96.671,188.02,78.66,161.81,42.7,140.249 C13.967,123.021,0,102.316,0,76.952c0-30.228,19.701-62.354,56.211-62.354c24.457,0,39.282,10.829,46.956,18.941 c7.674-8.113,22.499-18.941,46.956-18.941C186.633,14.597,206.333,46.724,206.333,76.952z"/></svg>
+                    </button>
+                    <img src="${element.image}">
+                    <p class="cajitaOverlay">
+                        ${element.name}<br>
+                        ${element.category}<br>
+                        ${element.directed}<br>
+                        ${element.duration}
+                    </p>
+                `;
+            }
+            if (section === 'games') {
+                tempDiv.setAttribute('class', `cajita cajita_game cajita_game_${i}`);
+                tempDiv.innerHTML = `
+                    <button class="btnFav ${classActive}" data-name="${element.name}">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 206.333 206.333" style="enable-background:new 0 0 206.333 206.333;" xml:space="preserve"><path fill="#bf0101" d="M206.333,76.952c0,25.365-13.967,46.069-42.7,63.297c-36.253,21.737-54.063,47.905-54.239,48.167 c-1.393,2.076-3.729,3.321-6.228,3.321c-2.497,0-4.83-1.243-6.223-3.314C96.671,188.02,78.66,161.81,42.7,140.249 C13.967,123.021,0,102.316,0,76.952c0-30.228,19.701-62.354,56.211-62.354c24.457,0,39.282,10.829,46.956,18.941 c7.674-8.113,22.499-18.941,46.956-18.941C186.633,14.597,206.333,46.724,206.333,76.952z"/></svg>
+                    </button>
+                    <img src="${element.image}">
+                    <p class="cajitaOverlay">
+                        ${element.name}<br>
+                        ${element.developed}<br>
+                        ${element.year}<br>
+                        ${element.platform}
+                    </p>
+                `;
+            }
+            if (section === 'search') {
+                tempDiv.setAttribute('class', `cajita cajita_search cajita_search_${i}`);
+                tempDiv.innerHTML = `
+                    <button class="btnFav ${classActive}" data-name="${element.name}">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 206.333 206.333" style="enable-background:new 0 0 206.333 206.333;" xml:space="preserve"><path fill="#bf0101" d="M206.333,76.952c0,25.365-13.967,46.069-42.7,63.297c-36.253,21.737-54.063,47.905-54.239,48.167 c-1.393,2.076-3.729,3.321-6.228,3.321c-2.497,0-4.83-1.243-6.223-3.314C96.671,188.02,78.66,161.81,42.7,140.249 C13.967,123.021,0,102.316,0,76.952c0-30.228,19.701-62.354,56.211-62.354c24.457,0,39.282,10.829,46.956,18.941 c7.674-8.113,22.499-18.941,46.956-18.941C186.633,14.597,206.333,46.724,206.333,76.952z"/></svg>
+                    </button>
+                    <img src="${element.image}">
+                    <p class="cajitaOverlay">
+                        ${element.name}<br>
+                    </p>
+                `;
+            }
+
+            wrapperCajitas.append(tempDiv);
+        }
+    };
+	const renderCajitas = (section)=>{
 		section = section.toLowerCase();
 
 		fetch(`http://localhost:6006/fp-api/${section}`)
@@ -18,286 +93,48 @@ if (document.querySelector('#wrapperCajitas')) {
 		.then((res)=>{
 			let dataArray = res;
 
-			for (let i = 0; i < dataArray.length; i++) {
-				const element = dataArray[i];
-
-				let tempDiv = document.createElement('div');
-
-				if (section === 'home') {
-					tempDiv.setAttribute('class', `cajita cajita_home cajita_home_${i}`);
-					tempDiv.innerHTML = `
-						<img src="${element.image}">
-						<p class="cajitaOverlay">
-							${element.name}<br>
-						</p>
-					`;
-				}
-				if (section === 'movies') {
-					tempDiv.setAttribute('class', `cajita cajita_movie cajita_movie_${i}`);
-					tempDiv.innerHTML = `
-						<img src="${element.image}">
-						<p class="cajitaOverlay">
-							${element.name}<br>
-							${element.category}<br>
-							${element.directed}<br>
-							${element.duration}
-						</p>
-					`;
-				}
-				if (section === 'games') {
-					tempDiv.setAttribute('class', `cajita cajita_game cajita_game_${i}`);
-					tempDiv.innerHTML = `
-						<img src="${element.image}">
-						<p class="cajitaOverlay">
-							${element.name}<br>
-							${element.developed}<br>
-							${element.year}<br>
-							${element.platform}
-						</p>
-					`;
-				}
-	
-				wrapperCajitas.append(tempDiv);
-			}
+			insertCajitas(dataArray, section);
 		});
 	};
 
+    // add/remove favorites
+    const addRemoveFav = (elmName, btnElm) => {
+        elmName = elmName.toString();
+
+        if (arrayFavs.includes(elmName)) {
+            // remove from favs
+            arrayFavs = arrayFavs.filter(val => val !== elmName);
+            localStorage.setItem('arrayFavs', arrayFavs);
+        } else {
+            // add to favs
+            arrayFavs.push(elmName);
+            localStorage.setItem('arrayFavs', arrayFavs);
+        }
+
+        btnElm.classList.toggle('active');
+    };
+
+    window.addEventListener('click', (e)=>{
+        const elm = e.target;
+
+        if (elm.classList.contains('btnFav')) {
+            addRemoveFav(elm.dataset.name, elm);
+        }
+    });
+
+    // renderear cajitas segun seccion
 	if (wrapperCajitas.classList.contains('cajitasHome')) {
 		renderCajitas('home');
 	}
 	if (wrapperCajitas.classList.contains('cajitasMovies')) {
 		renderCajitas('movies');
 	}
-
 	if (wrapperCajitas.classList.contains('cajitasGames')) {
 		renderCajitas('games');
 	}
-
-    /* var moviesArray = [
-        {
-            name: "65",
-            category: "science fiction, action film",
-            directed: "AScott Beck, Bryan Woods",
-            duration: "93 minutes",
-            image: "../assets/img/65.webp"
-        },
-        {
-            name: "Ant-Man and the Wasp: Quantumania",
-            category: "superhero film",
-            directed: "Peyton Reed",
-            duration: "124 minutes",
-            image: "../assets/img/Ant_Man_y_la_Avispa_Quantumanaia-585469373-large.webp"
-        },
-        {
-            name: "John Wick: Chapter 4",
-            category: "neo-noir action thriller film",
-            directed: "Chad Stahelski",
-            duration: "169 minutes",
-            image: "../assets/img/jw4.webp"
-        },
-        {
-            name: "Shazam! Fury of the Gods",
-            category: "superhero film",
-            directed: "David F. Sandberg",
-            duration: "130 minutes",
-            image: "../assets/img/shazam.webp"
-        },
-        {
-            name: "Knock at the Cabin",
-            category: "apocalyptic psychological horror",
-            directed: "M. Night Shyamalan",
-            duration: "100 minutes",
-            image: "../assets/img/knockatthecabin.webp"
-        },
-        {
-            name: "Scream VI",
-            category: "slasher film",
-            directed: "Matt Bettinelli-Olpin, Tyler Gillett",
-            duration: "122 minutes",
-            image: "../assets/img/scream6.webp"
-        },
-        {
-            name: "The Fabelmans",
-            category: "coming-of-age drama film",
-            directed: "Steven Spielberg",
-            duration: "151 minutes",
-            image: "../assets/img/Los_Fabelman-723163902-large.webp"
-        },
-        {
-            name: "Jason Bourne",
-            category: "action-thriller film",
-            directed: "Paul Greengrass",
-            duration: "123 minutes",
-            image: "../assets/img/jason_bourne.webp"
-        },
-        {
-            name: "V for Vendetta",
-            category: "dystopian political action film",
-            directed: "James McTeigue",
-            duration: "133 minutes",
-            image: "../assets/img/V_For_Vendetta.webp"
-        },
-        {
-            name: "21 Blackjack",
-            category: "heist drama film",
-            directed: "Robert Luketic",
-            duration: "123 minutes",
-            image: "../assets/img/21_Blackjack.webp"
-        }
-    ];
-
-    var gamesArray = [
-        {
-            name: "Monkey Island",
-            developed: "Lucasfilm Games y Telltale Games",
-            year: "1990",
-            platform: "PC",
-            image: "../assets/img/monkey.webp"
-        },
-        {
-            name: "Reverie",
-            developed: "Lucasfilm Games y Telltale Games",
-            year: "1990",
-            platform: "PC",
-            image: "../assets/img/reverie.webp"
-        },
-        {
-            name: "Synapse",
-            developed: "Lucasfilm Games y Telltale Games",
-            year: "1990",
-            platform: "PC",
-            image: "../assets/img/Synapse.webp"
-        },
-        {
-            name: "Remnant 2",
-            developed: "Lucasfilm Games y Telltale Games",
-            year: "1990",
-            platform: "PC",
-            image: "../assets/img/remnant2.webp"
-        },
-        {
-            name: "HL",
-            developed: "Lucasfilm Games y Telltale Games",
-            year: "1990",
-            platform: "PC",
-            image: "../assets/img/HL.webp"
-        },
-        {
-            name: "Megaman",
-            developed: "Lucasfilm Games y Telltale Games",
-            year: "1990",
-            platform: "PC",
-            image: "../assets/img/megaman.webp"
-        },
-        {
-            name: "DI2",
-            developed: "Lucasfilm Games y Telltale Games",
-            year: "1990",
-            platform: "PC",
-            image: "../assets/img/DI2.webp"
-        },
-        {
-            name: "r6",
-            developed: "Lucasfilm Games y Telltale Games",
-            year: "1990",
-            platform: "PC",
-            image: "../assets/img/r6.webp"
-        },
-        {
-            name: "doom_ftw",
-            developed: "Lucasfilm Games y Telltale Games",
-            year: "1990",
-            platform: "PC",
-            image: "../assets/img/doom_ftw.webp"
-        },
-        {
-            name: "Skyrim",
-            developed: "Lucasfilm Games y Telltale Games",
-            year: "1990",
-            platform: "PC",
-            image: "../assets/img/skyrim.webp"
-        }
-    ]; */
-    
-	/* const getData = (type)=>{
-		if (!type) return;
-	
-		fetch(`http://localhost:6006/fp-api/${type}`)
-		.then((res)=>{
-			return res.json();
-		})
-		.then((res)=>{
-			res.forEach(elm=>{
-				moviesArray.push(elm);
-			});
-		});
-	}; */
-    
-    /* var homeArray = [];
-    for (let i = 0; i < 10; i++) {
-        const element = (i % 2 === 0) ? gamesArray[i]: moviesArray[i];
-        homeArray.push(element);
-    } */
-    
-    /* let dataArray;
-    let generateCajita;
-    if (wrapperCajitas.classList.contains('cajitasHome')) {
-        dataArray = homeArray;
-        generateCajita = (element, i)=>{
-            let tempDiv = document.createElement('div');
-            tempDiv.setAttribute('class', `cajita cajita_home cajita_home_${i}`);
-            tempDiv.innerHTML = `
-                <img src="${element.image}">
-                <p class="cajitaOverlay">
-                    ${element.name}<br>
-                </p>
-            `;
-
-            wrapperCajitas.append(tempDiv);
-        };
-    }
-    if (wrapperCajitas.classList.contains('cajitasMovies')) {
-        dataArray = moviesArray;
-        generateCajita = (element, i)=>{
-            let tempDiv = document.createElement('div');
-            tempDiv.setAttribute('class', `cajita cajita_movie cajita_movie_${i}`);
-            tempDiv.innerHTML = `
-                <img src="${element.image}">
-                <p class="cajitaOverlay">
-                    ${element.name}<br>
-                    ${element.category}<br>
-                    ${element.directed}<br>
-                    ${element.duration}
-                </p>
-            `;
-
-            wrapperCajitas.append(tempDiv);
-        };
-    }
-    if (wrapperCajitas.classList.contains('cajitasGames')) {
-        dataArray = gamesArray;
-        generateCajita = (element, i)=>{
-            let tempDiv = document.createElement('div');
-            tempDiv.setAttribute('class', `cajita cajita_game cajita_game_${i}`);
-            tempDiv.innerHTML = `
-                <img src="${element.image}">
-                <p class="cajitaOverlay">
-                    ${element.name}<br>
-                    ${element.developed}<br>
-                    ${element.year}<br>
-                    ${element.platform}
-                </p>
-            `;
-
-            wrapperCajitas.append(tempDiv);
-        };
-    }
-
-    for (let i = 0; i < dataArray.length; i++) {
-        const element = dataArray[i];
-
-        generateCajita(element, i);
-    } */
+	if (wrapperCajitas.classList.contains('cajitasSearch')) {
+        insertCajitas(searchResults, 'search');
+	}
 }
 
 const loginBtn = document.createElement ('button');
@@ -321,6 +158,13 @@ const displayLogin = ()=> {
 
 loginBtn?.addEventListener('click', (e)=>{
     displayLogin();
+});
+
+// search form
+document.querySelector('#headerSearchForm').addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    window.location = `/search/${e.target.querySelector('input').value}`;
 });
 
 window.addEventListener('load', ()=>{

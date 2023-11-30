@@ -162,6 +162,30 @@ main {
   padding-left: 8px;
 }
 
+.btnFav {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 22;
+  background-color: transparent;
+  border: unset;
+}
+
+.btnFav > * {
+  pointer-events: none;
+}
+
+.btnFav svg path {
+  fill: #acacac;
+  transition: all 0.3s ease;
+}
+
+.btnFav.active svg path {
+  fill: #bf0101;
+}
+
 #wrapperCajitas {
   text-align: center;
 }

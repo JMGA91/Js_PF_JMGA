@@ -9,12 +9,12 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="shortcut icon" href="./assets/icons/favicon-16x16.png">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="/assets/icons/favicon-16x16.png">
+    <link rel="stylesheet" href="/css/style.css">
     <title>FlamePedia</title>
 </head>
 <body data-section="<%= currSec %>">
-  <div>
+  <div> 
     <header>
       <nav class="navbar navbar-expand-lg menu1">
           <div class="container-fluid">
@@ -31,8 +31,8 @@
                   <a class="nav-link menu_contact" href="/contact">CONTACT</a>
                 </li>
               </ul>
-              <form class="d-flex search_form" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <form id="headerSearchForm" class="d-flex search_form" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
                 <button class="btn btn-outline-success search" type="submit">Search</button>
               </form>
               <!-- <button id="loginBtn">Login</button> -->

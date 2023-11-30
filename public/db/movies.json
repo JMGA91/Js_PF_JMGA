@@ -1,5 +1,6 @@
 [
 	{
+		"id": 0,
 		"name": "65",
 		"category": "science fiction, action film",
 		"directed": "AScott Beck, Bryan Woods",
@@ -7,6 +8,7 @@
 		"image": "../assets/img/65.webp"
 	},
 	{
+		"id": 1,
 		"name": "Ant-Man and the Wasp: Quantumania",
 		"category": "superhero film",
 		"directed": "Peyton Reed",
@@ -14,6 +16,7 @@
 		"image": "../assets/img/Ant_Man_y_la_Avispa_Quantumanaia-585469373-large.webp"
 	},
 	{
+		"id": 2,
 		"name": "John Wick: Chapter 4",
 		"category": "neo-noir action thriller film",
 		"directed": "Chad Stahelski",
@@ -21,6 +24,7 @@
 		"image": "../assets/img/jw4.webp"
 	},
 	{
+		"id": 3,
 		"name": "Shazam! Fury of the Gods",
 		"category": "superhero film",
 		"directed": "David F. Sandberg",
@@ -28,6 +32,7 @@
 		"image": "../assets/img/shazam.webp"
 	},
 	{
+		"id": 4,
 		"name": "Knock at the Cabin",
 		"category": "apocalyptic psychological horror",
 		"directed": "M. Night Shyamalan",
@@ -35,6 +40,7 @@
 		"image": "../assets/img/knockatthecabin.webp"
 	},
 	{
+		"id": 5,
 		"name": "Scream VI",
 		"category": "slasher film",
 		"directed": "Matt Bettinelli-Olpin, Tyler Gillett",
@@ -42,6 +48,7 @@
 		"image": "../assets/img/scream6.webp"
 	},
 	{
+		"id": 6,
 		"name": "The Fabelmans",
 		"category": "coming-of-age drama film",
 		"directed": "Steven Spielberg",
@@ -49,6 +56,7 @@
 		"image": "../assets/img/Los_Fabelman-723163902-large.webp"
 	},
 	{
+		"id": 7,
 		"name": "Jason Bourne",
 		"category": "action-thriller film",
 		"directed": "Paul Greengrass",
@@ -56,6 +64,7 @@
 		"image": "../assets/img/jason_bourne.webp"
 	},
 	{
+		"id": 8,
 		"name": "V for Vendetta",
 		"category": "dystopian political action film",
 		"directed": "James McTeigue",
@@ -63,6 +72,7 @@
 		"image": "../assets/img/V_For_Vendetta.webp"
 	},
 	{
+		"id": 9,
 		"name": "21 Blackjack",
 		"category": "heist drama film",
 		"directed": "Robert Luketic",

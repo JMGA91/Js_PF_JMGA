@@ -1,5 +1,6 @@
 [
     {
+        "id": 0,
         "name": "Monkey Island",
         "developed": "Lucasfilm Games y Telltale Games",
         "year": "1990",
@@ -7,6 +8,7 @@
         "image": "../assets/img/monkey.webp"
     },
     {
+        "id": 1,
         "name": "Reverie",
         "developed": "Lucasfilm Games y Telltale Games",
         "year": "1990",
@@ -14,6 +16,7 @@
         "image": "../assets/img/reverie.webp"
     },
     {
+        "id": 2,
         "name": "Synapse",
         "developed": "Lucasfilm Games y Telltale Games",
         "year": "1990",
@@ -21,6 +24,7 @@
         "image": "../assets/img/Synapse.webp"
     },
     {
+        "id": 3,
         "name": "Remnant 2",
         "developed": "Lucasfilm Games y Telltale Games",
         "year": "1990",
@@ -28,6 +32,7 @@
         "image": "../assets/img/remnant2.webp"
     },
     {
+        "id": 4,
         "name": "HL",
         "developed": "Lucasfilm Games y Telltale Games",
         "year": "1990",
@@ -35,6 +40,7 @@
         "image": "../assets/img/HL.webp"
     },
     {
+        "id": 5,
         "name": "Megaman",
         "developed": "Lucasfilm Games y Telltale Games",
         "year": "1990",
@@ -42,6 +48,7 @@
         "image": "../assets/img/megaman.webp"
     },
     {
+        "id": 6,
         "name": "DI2",
         "developed": "Lucasfilm Games y Telltale Games",
         "year": "1990",
@@ -49,6 +56,7 @@
         "image": "../assets/img/DI2.webp"
     },
     {
+        "id": 7,
         "name": "r6",
         "developed": "Lucasfilm Games y Telltale Games",
         "year": "1990",
@@ -56,6 +64,7 @@
         "image": "../assets/img/r6.webp"
     },
     {
+        "id": 8,
         "name": "doom_ftw",
         "developed": "Lucasfilm Games y Telltale Games",
         "year": "1990",
@@ -63,6 +72,7 @@
         "image": "../assets/img/doom_ftw.webp"
     },
     {
+        "id": 9,
         "name": "Skyrim",
         "developed": "Lucasfilm Games y Telltale Games",
         "year": "1990",
