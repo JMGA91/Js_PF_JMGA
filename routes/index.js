@@ -51,19 +51,21 @@ router.all('/contact', (req, res)=>{
 });
 router.all('/search/:query', (req, res)=>{
 	let searchResults = [];
-	const query = req.params.query;
+	const query = req.params.query.toLowerCase();
 	const moviesArray = readDb(path.join(process.cwd(), `./public/db/movies.json`));
 	const gamesArray = readDb(path.join(process.cwd(), `./public/db/games.json`));
 
 	for (let i = 0; i < moviesArray.length; i++) {
 		const element = moviesArray[i];
-		if (element.name.includes(query)) {
+		const elementName = element.name.toLowerCase();
+		if (elementName.includes(query)) {
 			searchResults.push(element);
 		}
 	}
 	for (let i = 0; i < gamesArray.length; i++) {
 		const element = gamesArray[i];
-		if (element.name.includes(query)) {
+		const elementName = element.name.toLowerCase();
+		if (elementName.includes(query)) {
 			searchResults.push(element);
 		}
 	}

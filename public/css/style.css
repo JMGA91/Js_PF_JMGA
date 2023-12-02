@@ -43,7 +43,8 @@ button.navbar-toggler {
 nav.navbar .nav-item .nav-link,
 #formulario input[type=submit],
 #formulario input[type=reset],
-#navbarSupportedContent .search_form .btn.search {
+#navbarSupportedContent .search_form .btn.search,
+#loginBtn {
   border: 1px solid #9bd957;
   background-color: transparent;
   border-radius: 10px;
@@ -56,9 +57,15 @@ nav.navbar .nav-item .nav-link:hover, nav.navbar .nav-item .nav-link.active,
 #formulario input[type=reset]:hover,
 #formulario input[type=reset].active,
 #navbarSupportedContent .search_form .btn.search:hover,
-#navbarSupportedContent .search_form .btn.search.active {
+#navbarSupportedContent .search_form .btn.search.active,
+#loginBtn:hover,
+#loginBtn.active {
   background-color: #402469;
   border-color: #84f991;
+}
+
+#loginBtn {
+  padding: 5px 10px;
 }
 
 nav.navbar .nav-item .nav-link {

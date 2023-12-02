@@ -3,14 +3,13 @@
 <main class="main_search_results">
 	<article>
 		<h3>Search results for <%= query %></h3>
-		<div id="wrapperCajitas" class="cajitasSearch">
-            <%= searchResults %>
-        </div>
+		<div id="wrapperCajitas" class="cajitasSearch"></div>
 	</article> 
 </main>
 
 <script>
-    var searchResults = '<%= searchResults %>';
+    var searchResults = '<%- JSON.stringify(searchResults) %>';
+    searchResults = JSON.parse(searchResults);
 </script>
 
 <%- include('footer.html') %>
